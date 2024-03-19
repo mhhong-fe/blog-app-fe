@@ -1,0 +1,6 @@
+auto-imports.d.ts
+components.d.ts
+output/
+.vscode
+package.json
+tsconfig.json

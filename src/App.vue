@@ -1,6 +1,7 @@
 <template>
     <div id="blog_app">
         <h2 class="text-4 font-500">Hello World!</h2>
+        <el-button type="primary">开始</el-button>
     </div>
 </template>
 

@@ -28,7 +28,8 @@
         "src/*.vue",
         "components.d.ts",
         "auto-imports.d.ts",
-        "./typed-router.d.ts"
+        "./typed-router.d.ts",
+        "env.d.ts"
     ],
     "exclude": ["dist", "node_modules"]
 }

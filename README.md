@@ -1,4 +1,4 @@
-## 特性
+# 特性
 
 - ⚡️ [Vue 3](https://github.com/vuejs/core), [Vite 5](https://github.com/vitejs/vite), [pnpm](https://pnpm.io/), [ESBuild](https://github.com/evanw/esbuild) - 就是快！
 
@@ -9,3 +9,6 @@
 - 🔥 使用 [新的 `<script setup>` 语法](https://github.com/vuejs/rfcs/pull/227)
 
 - 🦾 TypeScript
+
+
+# 约定

@@ -12,10 +12,18 @@ declare global {
   const $ref: typeof import('vue/macros')['$ref']
   const $shallowRef: typeof import('vue/macros')['$shallowRef']
   const $toRef: typeof import('vue/macros')['$toRef']
+  const API: typeof import('./src/api/common')['API']
+  const API_: typeof import('./src/api/common')['API_']
+  const API_HELLO: typeof import('./src/api/common')['API_HELLO']
+  const API_HELLO_: typeof import('./src/api/common')['API_HELLO_']
+  const API_HELLO_WORLD: typeof import('./src/api/common')['API_HELLO_WORLD']
+  const API_USER_LOGIN: typeof import('./src/api/common')['API_USER_LOGIN']
   const EffectScope: typeof import('vue')['EffectScope']
   const ElMess: typeof import('element-plus/es')['ElMess']
   const ElMessage: typeof import('element-plus/es')['ElMessage']
+  const HTTP_STATUS: typeof import('./src/api/request')['HTTP_STATUS']
   const acceptHMRUpdate: typeof import('pinia')['acceptHMRUpdate']
+  const axiosIns: typeof import('./src/api/request')['axiosIns']
   const computed: typeof import('vue')['computed']
   const createApp: typeof import('vue')['createApp']
   const createPinia: typeof import('pinia')['createPinia']
@@ -59,6 +67,7 @@ declare global {
   const reactive: typeof import('vue')['reactive']
   const readonly: typeof import('vue')['readonly']
   const ref: typeof import('vue')['ref']
+  const request: typeof import('./src/api/request')['request']
   const resolveComponent: typeof import('vue')['resolveComponent']
   const setActivePinia: typeof import('pinia')['setActivePinia']
   const setMapStoreSuffix: typeof import('pinia')['setMapStoreSuffix']
@@ -102,8 +111,12 @@ declare module 'vue' {
     readonly $ref: UnwrapRef<typeof import('vue/macros')['$ref']>
     readonly $shallowRef: UnwrapRef<typeof import('vue/macros')['$shallowRef']>
     readonly $toRef: UnwrapRef<typeof import('vue/macros')['$toRef']>
+    readonly API_HELLO_WORLD: UnwrapRef<typeof import('./src/api/common')['API_HELLO_WORLD']>
+    readonly API_USER_LOGIN: UnwrapRef<typeof import('./src/api/common')['API_USER_LOGIN']>
     readonly EffectScope: UnwrapRef<typeof import('vue')['EffectScope']>
+    readonly HTTP_STATUS: UnwrapRef<typeof import('./src/api/request')['HTTP_STATUS']>
     readonly acceptHMRUpdate: UnwrapRef<typeof import('pinia')['acceptHMRUpdate']>
+    readonly axiosIns: UnwrapRef<typeof import('./src/api/request')['axiosIns']>
     readonly computed: UnwrapRef<typeof import('vue')['computed']>
     readonly createApp: UnwrapRef<typeof import('vue')['createApp']>
     readonly createPinia: UnwrapRef<typeof import('pinia')['createPinia']>
@@ -147,6 +160,7 @@ declare module 'vue' {
     readonly reactive: UnwrapRef<typeof import('vue')['reactive']>
     readonly readonly: UnwrapRef<typeof import('vue')['readonly']>
     readonly ref: UnwrapRef<typeof import('vue')['ref']>
+    readonly request: UnwrapRef<typeof import('./src/api/request')['request']>
     readonly resolveComponent: UnwrapRef<typeof import('vue')['resolveComponent']>
     readonly setActivePinia: UnwrapRef<typeof import('pinia')['setActivePinia']>
     readonly setMapStoreSuffix: UnwrapRef<typeof import('pinia')['setMapStoreSuffix']>
@@ -183,8 +197,12 @@ declare module '@vue/runtime-core' {
     readonly $ref: UnwrapRef<typeof import('vue/macros')['$ref']>
     readonly $shallowRef: UnwrapRef<typeof import('vue/macros')['$shallowRef']>
     readonly $toRef: UnwrapRef<typeof import('vue/macros')['$toRef']>
+    readonly API_HELLO_WORLD: UnwrapRef<typeof import('./src/api/common')['API_HELLO_WORLD']>
+    readonly API_USER_LOGIN: UnwrapRef<typeof import('./src/api/common')['API_USER_LOGIN']>
     readonly EffectScope: UnwrapRef<typeof import('vue')['EffectScope']>
+    readonly HTTP_STATUS: UnwrapRef<typeof import('./src/api/request')['HTTP_STATUS']>
     readonly acceptHMRUpdate: UnwrapRef<typeof import('pinia')['acceptHMRUpdate']>
+    readonly axiosIns: UnwrapRef<typeof import('./src/api/request')['axiosIns']>
     readonly computed: UnwrapRef<typeof import('vue')['computed']>
     readonly createApp: UnwrapRef<typeof import('vue')['createApp']>
     readonly createPinia: UnwrapRef<typeof import('pinia')['createPinia']>
@@ -228,6 +246,7 @@ declare module '@vue/runtime-core' {
     readonly reactive: UnwrapRef<typeof import('vue')['reactive']>
     readonly readonly: UnwrapRef<typeof import('vue')['readonly']>
     readonly ref: UnwrapRef<typeof import('vue')['ref']>
+    readonly request: UnwrapRef<typeof import('./src/api/request')['request']>
     readonly resolveComponent: UnwrapRef<typeof import('vue')['resolveComponent']>
     readonly setActivePinia: UnwrapRef<typeof import('pinia')['setActivePinia']>
     readonly setMapStoreSuffix: UnwrapRef<typeof import('pinia')['setMapStoreSuffix']>

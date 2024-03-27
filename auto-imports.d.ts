@@ -14,6 +14,7 @@ declare global {
   const $toRef: typeof import('vue/macros')['$toRef']
   const API: typeof import('./src/api/common')['API']
   const API_: typeof import('./src/api/common')['API_']
+  const API_ADD_USER: typeof import('./src/api/common')['API_ADD_USER']
   const API_HELLO: typeof import('./src/api/common')['API_HELLO']
   const API_HELLO_: typeof import('./src/api/common')['API_HELLO_']
   const API_HELLO_WORLD: typeof import('./src/api/common')['API_HELLO_WORLD']
@@ -111,9 +112,11 @@ declare module 'vue' {
     readonly $ref: UnwrapRef<typeof import('vue/macros')['$ref']>
     readonly $shallowRef: UnwrapRef<typeof import('vue/macros')['$shallowRef']>
     readonly $toRef: UnwrapRef<typeof import('vue/macros')['$toRef']>
+    readonly API_ADD_USER: UnwrapRef<typeof import('./src/api/common')['API_ADD_USER']>
     readonly API_HELLO_WORLD: UnwrapRef<typeof import('./src/api/common')['API_HELLO_WORLD']>
     readonly API_USER_LOGIN: UnwrapRef<typeof import('./src/api/common')['API_USER_LOGIN']>
     readonly EffectScope: UnwrapRef<typeof import('vue')['EffectScope']>
+    readonly ElMessage: UnwrapRef<typeof import('element-plus/es')['ElMessage']>
     readonly HTTP_STATUS: UnwrapRef<typeof import('./src/api/request')['HTTP_STATUS']>
     readonly acceptHMRUpdate: UnwrapRef<typeof import('pinia')['acceptHMRUpdate']>
     readonly axiosIns: UnwrapRef<typeof import('./src/api/request')['axiosIns']>
@@ -197,9 +200,11 @@ declare module '@vue/runtime-core' {
     readonly $ref: UnwrapRef<typeof import('vue/macros')['$ref']>
     readonly $shallowRef: UnwrapRef<typeof import('vue/macros')['$shallowRef']>
     readonly $toRef: UnwrapRef<typeof import('vue/macros')['$toRef']>
+    readonly API_ADD_USER: UnwrapRef<typeof import('./src/api/common')['API_ADD_USER']>
     readonly API_HELLO_WORLD: UnwrapRef<typeof import('./src/api/common')['API_HELLO_WORLD']>
     readonly API_USER_LOGIN: UnwrapRef<typeof import('./src/api/common')['API_USER_LOGIN']>
     readonly EffectScope: UnwrapRef<typeof import('vue')['EffectScope']>
+    readonly ElMessage: UnwrapRef<typeof import('element-plus/es')['ElMessage']>
     readonly HTTP_STATUS: UnwrapRef<typeof import('./src/api/request')['HTTP_STATUS']>
     readonly acceptHMRUpdate: UnwrapRef<typeof import('pinia')['acceptHMRUpdate']>
     readonly axiosIns: UnwrapRef<typeof import('./src/api/request')['axiosIns']>

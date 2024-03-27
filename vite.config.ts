@@ -21,6 +21,9 @@ export default defineConfig({
             vueTemplate: true,
             // 这些目录下的文件会被自动导入
             dirs: ['./src/composables/**', './src/api/**', './src/utils'],
+            eslintrc: {
+                enabled: true,
+            },
         }),
         Components({
             resolvers: [ElementPlusResolver()],

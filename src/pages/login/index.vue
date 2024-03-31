@@ -8,12 +8,20 @@
             <div class="w-50% bg-#fff pt-45">
                 <h2 class="flex justify-center">Blog</h2>
                 <div class="flex justify-center">
-                    <el-form class="mt-40px" size="large" label-width="80">
-                        <el-form-item label="email">
-                            <el-input v-model="userEmail" style="width: 260px" type="email"></el-input>
+                    <el-form
+                        ref="formRef"
+                        class="mt-40px"
+                        size="large"
+                        label-width="80"
+                        :model="formData"
+                        :rules="formRules"
+                        :hide-required-asterisk="true"
+                    >
+                        <el-form-item label="email" prop="email">
+                            <el-input v-model="formData.email" style="width: 260px"></el-input>
                         </el-form-item>
-                        <el-form-item label="password">
-                            <el-input v-model="userPassword" type="password"></el-input>
+                        <el-form-item label="password" prop="password">
+                            <el-input v-model="formData.password"></el-input>
                         </el-form-item>
                         <el-form-item>
                             <div class="flex justify-center w-100% mt-4">
@@ -43,19 +51,46 @@ import ExploreSrc from '@/assets/explore.svg';
 import {API_ADD_USER} from '@/api/common';
 
 const isRegister = ref(false);
-const userEmail = ref('');
-const userPassword = ref('');
+
+const formData = reactive({
+    email: '',
+    password: '',
+});
+
+const formRules = reactive({
+    email: [
+        {required: true, message: '请输入邮箱', trigger: 'blur'},
+        {
+            validator: (rule, value: string) => {
+                return new Promise((resolve, reject) => {
+                    const emailRegex = /^[\w-]+(\.[\w-]+)*@([\w-]+\.)+[a-zA-Z]{2,7}$/;
+                    if (emailRegex.test(value)) {
+                        resolve(true);
+                    } else {
+                        reject(new Error('请输入有效的邮箱'));
+                    }
+                });
+            },
+            trigger: 'blur',
+        },
+    ],
+    password: [{required: true, message: '请输入密码', trigger: 'blur'}],
+});
+
+const formRef = ref();
 
 async function login(event: MouseEvent) {
     event.preventDefault();
     event.stopPropagation();
+    await formRef.value.validate();
     if (isRegister.value) {
-        await request(API_ADD_USER({email: userEmail.value, password: userPassword.value}));
+        await request(API_ADD_USER({email: formData.email, password: formData.password}));
         ElMessage.success('Register success !');
     } else {
-        await request(API_USER_LOGIN({email: userEmail.value, password: userPassword.value}));
+        await request(API_USER_LOGIN({email: formData.email, password: formData.password}));
         ElMessage.success('Login success !');
     }
+    window.open('/home', '_self');
 }
 </script>
 

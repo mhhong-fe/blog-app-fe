@@ -2,7 +2,7 @@ import axios, {type ARC, type AxiosError, type AxiosResponse} from 'axios';
 import {ElMessage} from 'element-plus';
 
 const devBaseUrl = 'http://127.0.0.1:3000/blog/be';
-const prodBaseUrl = '/blog/fe';
+const prodBaseUrl = '/blog/be';
 
 export const HTTP_STATUS = {
     OK: 200,

@@ -1,7 +1,8 @@
 import axios, {type ARC, type AxiosError, type AxiosResponse} from 'axios';
 import {ElMessage} from 'element-plus';
 
-const baseUrl = '/blog/be';
+const devBaseUrl = 'http://127.0.0.1:3000/blog/be';
+const prodBaseUrl = '/blog/fe';
 
 export const HTTP_STATUS = {
     OK: 200,
@@ -30,10 +31,7 @@ export interface CommonResponseData<T = object> {
 axiosIns.interceptors.request.use(config => {
     const modifiedConfig = {...config};
     const isDev = import.meta.env.MODE === 'development';
-    if (isDev && config.url && config.mockPrefix) {
-        modifiedConfig.url = config.mockPrefix + config.url;
-    }
-    modifiedConfig.url = `http://127.0.0.1:3000${baseUrl}${config.url}`;
+    modifiedConfig.url = `${isDev ? devBaseUrl : prodBaseUrl}${config.url}`;
     return modifiedConfig;
 });
 

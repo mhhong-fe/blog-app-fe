@@ -4,6 +4,7 @@ import ElementPlus from 'element-plus';
 import 'element-plus/dist/index.css';
 import './styles/index.scss';
 import 'uno.css';
+import 'animate.css';
 import {createRouter, createWebHistory} from 'vue-router/auto';
 
 import App from './App.vue';

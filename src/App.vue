@@ -5,10 +5,10 @@
 </template>
 
 <script setup lang="ts">
-const router = useRouter();
-if (location.pathname === '/' || location.pathname === '') {
-    router.push('/login');
-}
+// const router = useRouter();
+// if (location.pathname === '/' || location.pathname === '') {
+//     router.push('/login');
+// }
 </script>
 
 <style module lang="scss"></style>

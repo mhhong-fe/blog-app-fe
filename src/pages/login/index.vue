@@ -59,7 +59,11 @@ const formData = reactive({
 
 const formRules = reactive({
     email: [
-        {required: true, message: '请输入邮箱', trigger: 'blur'},
+        {
+            required: true,
+            message: '请输入邮箱',
+            trigger: 'blur',
+        },
         {
             validator: (rule, value: string) => {
                 return new Promise((resolve, reject) => {
@@ -74,7 +78,13 @@ const formRules = reactive({
             trigger: 'blur',
         },
     ],
-    password: [{required: true, message: '请输入密码', trigger: 'blur'}],
+    password: [
+        {
+            required: true,
+            message: '请输入密码',
+            trigger: 'blur',
+        },
+    ],
 });
 
 const formRef = ref();
@@ -84,10 +94,20 @@ async function login(event: MouseEvent) {
     event.stopPropagation();
     await formRef.value.validate();
     if (isRegister.value) {
-        await request(API_ADD_USER({email: formData.email, password: formData.password}));
+        await request(
+            API_ADD_USER({
+                email: formData.email,
+                password: formData.password,
+            })
+        );
         ElMessage.success('Register success !');
     } else {
-        await request(API_USER_LOGIN({email: formData.email, password: formData.password}));
+        await request(
+            API_USER_LOGIN({
+                email: formData.email,
+                password: formData.password,
+            })
+        );
         ElMessage.success('Login success !');
     }
     window.open('/home', '_self');

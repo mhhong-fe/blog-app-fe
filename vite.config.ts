@@ -12,7 +12,15 @@ import vue from '@vitejs/plugin-vue';
 // https://vitejs.dev/config/
 export default defineConfig({
     plugins: [
-        VueRouter({}),
+        VueRouter({
+            routesFolder: [
+                'src/pages',
+                {
+                    src: 'src/pages',
+                    path: 'blog/',
+                },
+            ],
+        }),
         vue(),
         AutoImport({
             resolvers: [ElementPlusResolver()],
@@ -45,5 +53,9 @@ export default defineConfig({
     },
     server: {
         port: 3001,
+    },
+    base: '/blog',
+    build: {
+        outDir: 'dist/blog',
     },
 });

@@ -29,7 +29,9 @@ export interface CommonResponseData<T = object> {
 }
 
 axiosIns.interceptors.request.use(config => {
-    const modifiedConfig = {...config};
+    const modifiedConfig = {
+        ...config,
+    };
     const isDev = import.meta.env.MODE === 'development';
     modifiedConfig.url = `${isDev ? devBaseUrl : prodBaseUrl}${config.url}`;
     return modifiedConfig;

@@ -116,7 +116,6 @@ declare module 'vue' {
     readonly API_HELLO_WORLD: UnwrapRef<typeof import('./src/api/common')['API_HELLO_WORLD']>
     readonly API_USER_LOGIN: UnwrapRef<typeof import('./src/api/common')['API_USER_LOGIN']>
     readonly EffectScope: UnwrapRef<typeof import('vue')['EffectScope']>
-    readonly ElMessage: UnwrapRef<typeof import('element-plus/es')['ElMessage']>
     readonly HTTP_STATUS: UnwrapRef<typeof import('./src/api/request')['HTTP_STATUS']>
     readonly acceptHMRUpdate: UnwrapRef<typeof import('pinia')['acceptHMRUpdate']>
     readonly axiosIns: UnwrapRef<typeof import('./src/api/request')['axiosIns']>
@@ -204,7 +203,6 @@ declare module '@vue/runtime-core' {
     readonly API_HELLO_WORLD: UnwrapRef<typeof import('./src/api/common')['API_HELLO_WORLD']>
     readonly API_USER_LOGIN: UnwrapRef<typeof import('./src/api/common')['API_USER_LOGIN']>
     readonly EffectScope: UnwrapRef<typeof import('vue')['EffectScope']>
-    readonly ElMessage: UnwrapRef<typeof import('element-plus/es')['ElMessage']>
     readonly HTTP_STATUS: UnwrapRef<typeof import('./src/api/request')['HTTP_STATUS']>
     readonly acceptHMRUpdate: UnwrapRef<typeof import('pinia')['acceptHMRUpdate']>
     readonly axiosIns: UnwrapRef<typeof import('./src/api/request')['axiosIns']>

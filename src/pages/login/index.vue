@@ -110,7 +110,7 @@ async function login(event: MouseEvent) {
         );
         ElMessage.success('Login success !');
     }
-    window.open('/home', '_self');
+    window.open('/blog/home', '_self');
 }
 </script>
 

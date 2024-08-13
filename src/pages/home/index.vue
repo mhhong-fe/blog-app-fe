@@ -3,6 +3,7 @@
         <span>Home页面</span>
         <div>
             <el-button type="primary" @click="handleClick">
+                <el-icon><Search /></el-icon>
                 发起请求
             </el-button>
         </div>
@@ -10,6 +11,7 @@
 </template>
 
 <script setup lang= "ts">
+import { Search } from '@element-plus/icons-vue';
 import { ElMessage } from 'element-plus';
 
 async function handleClick() {

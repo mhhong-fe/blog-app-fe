@@ -2,7 +2,9 @@
     <div>
         <span>Home页面</span>
         <div>
-            <button @click="handleClick">发起请求</button>
+            <button @click="handleClick">
+                发起请求
+            </button>
         </div>
     </div>
 </template>

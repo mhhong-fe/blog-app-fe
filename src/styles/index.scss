@@ -8,4 +8,18 @@ body {
     width: 100vw;
     height: 100vh;
     margin: 0;
+    font-family: cursive;
+    font-size: 16px;
+}
+
+.content-height {
+    height: calc(100vh - 90px);
+}
+
+// 全屏，内容居中
+.content-center {
+    height: calc(100vh - 180px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

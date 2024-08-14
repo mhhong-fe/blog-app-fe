@@ -1,6 +1,6 @@
 <template>
     <header class="position-fixed h-22.5 w-full b-b-1.5 b-b-solid b-#e2e2e3 bg-#fff flex items-center justify-center">
-        <div class="flex w-300 items-center justify-between">
+        <div class="flex w-80 lg:w-300 items-center justify-between">
             <div class="flex items-center gap-4">
                 <div class="w-12 h-12 rd-50%">
                     <img :src="AvatarImg" class="w-12 h-12 object-cover bg-#f7f8fa rd-50%" alt="">
@@ -8,7 +8,7 @@
                 <div class="font-500 text-5">
                     个人博客
                 </div>
-                <div>
+                <div class="hidden lg:block">
                     <el-input
                         v-model="keyword"
                         style="width: 240px"
@@ -19,7 +19,7 @@
                     />
                 </div>
             </div>
-            <div class="flex gap-5">
+            <div class="gap-5 hidden lg:flex">
                 <div
                     v-for="item in titleList"
                     :key="item.name" class="cursor-pointer"

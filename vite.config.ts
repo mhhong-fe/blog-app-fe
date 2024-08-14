@@ -8,7 +8,13 @@ import UnoCSS from 'unocss/vite';
 export default defineConfig({
     plugins: [
         vue(),
-        UnoCSS(),
+        UnoCSS({
+            theme: {
+                screens: {
+                    lg: '1280px',
+                },
+            },
+        }),
     ],
     resolve: {
         alias: {

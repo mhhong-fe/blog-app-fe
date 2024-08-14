@@ -16,6 +16,7 @@
                         placeholder="搜索"
                         :prefix-icon="Search"
                         :class="$style.searchInput"
+                        @keyup.enter="handleSearch"
                     />
                 </div>
             </div>
@@ -36,7 +37,9 @@
 import { Search } from '@element-plus/icons-vue';
 import { ref } from 'vue';
 import { useRouter } from 'vue-router';
+import { ElMessage } from 'element-plus';
 import AvatarImg from '@/assests/images/avatar.png';
+import { debounce } from '@/utils/index';
 
 const titleList = [
     { name: '首页', route: '/home' },
@@ -53,6 +56,22 @@ function handleRouteClick(route: string) {
     activeRoute.value = route;
     router.push(route);
 }
+
+const handleSearch = debounce(async () => {
+    if (keyword.value.length === 0) {
+        ElMessage.warning('请输入查询关键字');
+        return;
+    }
+    const res = await fetch('/api/blogList', {
+        method: 'POST', // 请求方法
+        headers: {
+            'Content-Type': 'application/json', // 请求头部，指定发送的数据类型
+        },
+        body: JSON.stringify({ keyword: keyword.value }), // 将数据转换为 JSON 字符串
+    }).then(res => res.json());
+
+    ElMessage.info(`相关博客数量为：${res.data.length}`);
+}, 300);
 </script>
 
 <style lang="scss" module>

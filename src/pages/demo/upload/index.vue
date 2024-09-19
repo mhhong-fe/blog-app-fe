@@ -29,8 +29,9 @@
                 </div>
             </template>
         </el-upload>
-        <el-dialog v-model="previewDlgVisible" title="Shipping address" width="500">
-            <FilePreview :url="previewUrl" />
+        <el-dialog v-if="previewDlgVisible" v-model="previewDlgVisible" title="Shipping address" width="500">
+            <!-- 关闭弹窗就销毁这个元素，不然两个pdf会重叠 -->
+            <FilePreview v-if="previewDlgVisible" :url="previewUrl" />
         </el-dialog>
     </div>
 </template>

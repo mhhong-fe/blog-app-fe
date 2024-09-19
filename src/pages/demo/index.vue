@@ -20,10 +20,12 @@ import { computed, ref } from 'vue';
 import type { MenuItemClicked } from 'element-plus';
 import ColorPicker from './color-picker/index.vue';
 import RotateMoon from './rotate-moon/index.vue';
+import Upload from './upload/index.vue';
 
 const demoList = [
     { key: 'color-picker', title: '原生的取色器', component: ColorPicker },
     { key: 'rotate-moon', title: '月亮绕着地球转', component: RotateMoon },
+    { key: 'upload', title: '文件上传', component: Upload },
 ];
 
 const selectMenu = ref(demoList[0].key);

@@ -24,7 +24,7 @@
                 <div
                     v-for="item in titleList"
                     :key="item.name" class="cursor-pointer"
-                    :class="item.route === activeRoute ? 'activeRoute' : ''" @click="handleRouteClick(item.route)"
+                    :class="item.route === activeRoute ? 'color-#407fff' : ''" @click="handleRouteClick(item.route)"
                 >
                     {{ item.name }}
                 </div>
@@ -38,7 +38,7 @@ import { Search } from '@element-plus/icons-vue';
 import { ref } from 'vue';
 import { useRouter } from 'vue-router';
 import { ElMessage } from 'element-plus';
-import AvatarImg from '@/assests/images/avatar.png';
+import AvatarImg from '@/assets/imgs/avatar.png';
 import { debounce } from '@/utils/index';
 
 const titleList = [

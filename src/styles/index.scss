@@ -16,6 +16,10 @@ body {
     height: calc(100vh - 90px);
 }
 
+.content-width {
+    width: calc(100vw - 200px);
+}
+
 // 全屏，内容居中
 .content-center {
     height: calc(100vh - 180px);

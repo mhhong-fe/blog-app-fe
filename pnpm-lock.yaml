@@ -14,6 +14,9 @@ dependencies:
   element-plus:
     specifier: ^2.8.0
     version: 2.8.0(vue@3.4.37)
+  pdf-vue3:
+    specifier: ^1.0.12
+    version: 1.0.12
   vue:
     specifier: ^3.4.29
     version: 3.4.37(typescript@5.4.5)
@@ -3744,6 +3747,10 @@ packages:
   /pathe@1.1.2:
     resolution: {integrity: sha512-whLdWMYL2TwI08hn8/ZqAbrVemu0LNaNNJZX73O6qaIdCTfXutsLhMkjdENX0qhsQ9uIimo4/aQOmXkoon2nDQ==}
     dev: true
+
+  /pdf-vue3@1.0.12:
+    resolution: {integrity: sha512-7SMTx1RfRwdc+2WPniDzqM8MxJLqTNNzdyV0SeQTxeRLJGndb5Wv/fz5afO13oBSIvvaqcbZ/S3gF+XjqkSb9g==}
+    dev: false
 
   /perfect-debounce@1.0.0:
     resolution: {integrity: sha512-xCy9V055GLEqoFaHoC1SoLIaLmWctgCUaBaWxDZ7/Zx4CTyX7cJQLJOok/orfjZAh9kEYpjJa4d0KcJmCbctZA==}

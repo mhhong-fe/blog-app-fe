@@ -25,12 +25,12 @@
                         </span>
                         <span class="inline-flex items-center  gap-1">
                             <img :src="CategorySrc" alt="" width="14" height="14">
-                            分类
+                            {{ item.categoryName || '--' }}
                         </span>
-                        <span class="inline-flex items-center gap-1">
+                        <!-- <span class="inline-flex items-center gap-1">
                             <img :src="ViewSrc" alt="" width="14" height="14">
                             {{ item.viewCount }}
-                        </span>
+                        </span> -->
                     </div>
                 </div>
                 <el-pagination
@@ -87,7 +87,7 @@ import { request } from '@/api/index';
 import AuthorSrc from '@/assets/imgs/author.svg';
 import CategorySrc from '@/assets/imgs/category.svg';
 import TimeSrc from '@/assets/imgs/time.svg';
-import ViewSrc from '@/assets/imgs/views.svg';
+// import ViewSrc from '@/assets/imgs/views.svg';
 import AvatarImg from '@/assets/imgs/avatar.png';
 
 const list = ref([] as ArticlesRow[]);
@@ -120,13 +120,13 @@ onMounted(async () => {
 <style module lang="scss">
 .list {
     position: relative;
-    top: 0;
-    transition: top 0.2s linear;
+    transform: translateY(0);
+    transition: transform 0.2s linear;
 }
 
 .list:hover {
     box-shadow: 2px 2px 8px rgba(0, 0, 0 , .2);
-    top: -8px;
+    transform: translateY(-8px);
 }
 
 .card {

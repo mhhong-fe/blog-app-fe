@@ -24,6 +24,7 @@ export interface ArticlesRow extends EditArticlesPayload {
     updateTime: number;
     viewCount: number;
     author: string;
+    categoryName: string;
 }
 
 /**

@@ -24,7 +24,7 @@ import Upload from './upload/index.vue';
 
 const demoList = [
     { key: 'color-picker', title: '原生的取色器', component: ColorPicker },
-    { key: 'rotate-moon', title: '月亮绕着地球转', component: RotateMoon },
+    { key: 'rotate-moon', title: '旋转动画', component: RotateMoon },
     { key: 'upload', title: '文件上传', component: Upload },
 ];
 

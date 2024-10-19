@@ -13,7 +13,10 @@
     "dependencies": {
         "@element-plus/icons-vue": "^2.3.1",
         "animate.css": "^4.1.1",
+        "axios": "^1.7.7",
         "element-plus": "^2.8.0",
+        "i": "^0.3.7",
+        "md-editor-v3": "^4.21.0",
         "pdf-vue3": "^1.0.12",
         "vue": "^3.4.29",
         "vue-router": "4"

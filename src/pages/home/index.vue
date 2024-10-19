@@ -5,14 +5,36 @@
                 Hello World
             </div>
             <div class="aWord">
-                或许是不知梦的缘故，流离之人追逐幻影
+                {{ showText }}
             </div>
         </div>
     </div>
 </template>
 
 <script setup lang= "ts">
+import { computed, ref } from 'vue';
 
+const list = [
+    '或许是不知梦的缘故，流离之人追逐幻影',
+    '今人不见古时月，今月曾经照古人',
+    '山随平野尽，江入大荒流',
+    '月下飞天镜，云生结海楼',
+];
+
+const showIndex = ref(0);
+const showText = computed(() => list[showIndex.value]);
+
+setTimeout(() => {
+    showIndex.value++;
+    setInterval(() => {
+        if (showIndex.value < list.length - 1) {
+            showIndex.value++;
+        }
+        else {
+            showIndex.value = 0;
+        }
+    }, 8000);
+}, 4000);
 </script>
 
 <style scoped>
@@ -21,23 +43,28 @@
     bottom: 35px;
     right: 55px;
     font-size: 20px;
-    font-weight: 700;
-    color: transparent;
-    background: linear-gradient(90deg, transparent 0%, rgb(216 26 26) 20%, rgb(255, 255, 255) 50%, rgb(216 26 26) 80%, transparent 100%);
-    background-size: 80%;
-    background-repeat: no-repeat;
-    -webkit-background-clip: text;
-    background-clip: text;
-    animation: huerotate-ad62f0a1 5s linear infinite;
+    animation: fadeInOut 8s linear infinite;
 }
 
-@keyframes huerotate-ad62f0a1 {
+@keyframes fadeInOut {
     0% {
-    background-position: -500%;
+        opacity: 1;
+    }
+
+    20% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    80% {
+        opacity: 1;
     }
 
     100% {
-        background-position: 500%;
+        opacity: 1;
     }
 }
 </style>

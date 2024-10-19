@@ -1,3 +1,7 @@
+@import './element.scss';
+
+$indent: 15px;
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -27,3 +31,66 @@ body {
     justify-content: center;
     align-items: center;
 }
+
+:root {
+    --el-color-primary: #407fff;
+}
+
+ul.catalog-list {
+    height: 100%;
+    list-style: none;
+    margin: 0;
+    padding: 20px;
+    margin-bottom: 15px;
+}
+
+ul.catalog-list li {
+    height: 30px;
+    border-radius: 6px;
+    &:hover {
+        background: #e6e6e6;
+        a {
+        font-weight: 700;
+        }
+    }
+
+    &.active-li {
+        background: #e6e6e6;
+        a {
+          font-weight: 700;
+        }
+      }
+}
+
+ul.catalog-list li a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    color: #000;
+    text-decoration: none;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    line-height: 30px;
+    &[data-level="1"] {
+        padding-left: $indent;
+    }
+    
+    &[data-level="2"] {
+        padding-left: 2 * $indent;
+    }
+    
+    &[data-level="3"] {
+        padding-left: 3 * $indent;
+    }
+    
+    &[data-level="4"] {
+        padding-left: 4 * $indent;
+    }
+}
+
+
+
+
+  
+

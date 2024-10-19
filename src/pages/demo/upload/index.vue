@@ -11,13 +11,14 @@
             :on-exceed="handleExceed"
             :on-success="handleSuccess"
             :auto-upload="false"
+            accept=".pdf"
         >
             <el-button type="primary">
                 Click to upload
             </el-button>
             <template #tip>
                 <div class="el-upload__tip">
-                    jpg/png files with a size less than 500KB.
+                    目前仅支持预览pdf
                 </div>
             </template>
             <template #file="{ file }">
@@ -40,6 +41,7 @@
 import { ref } from 'vue';
 import { ElMessage, ElMessageBox } from 'element-plus';
 import type { UploadFile, UploadProps, UploadUserFile } from 'element-plus';
+import PDF from 'pdf-vue3';
 import FileIcon from '@/components/file-icon.vue';
 import FilePreview from '@/components/file-preview.vue';
 

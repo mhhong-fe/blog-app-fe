@@ -1,6 +1,6 @@
 <template>
     <div class="bg-#f4f5f5 content-height flex justify-center overflow-scroll">
-        <div class="w-300 flex justify-between mt-15">
+        <div class="w-250 lg-w-300 flex justify-center lg-justify-between mt-15">
             <div>
                 <div
                     v-for="item in list" :key="item.id"
@@ -27,10 +27,6 @@
                             <img :src="CategorySrc" alt="" width="14" height="14">
                             {{ item.categoryName || '--' }}
                         </span>
-                        <!-- <span class="inline-flex items-center gap-1">
-                            <img :src="ViewSrc" alt="" width="14" height="14">
-                            {{ item.viewCount }}
-                        </span> -->
                     </div>
                 </div>
                 <el-pagination
@@ -42,7 +38,7 @@
                 />
                 <div class="h-15" />
             </div>
-            <div class="w-75">
+            <div class="hidden lg-block w-75">
                 <div class="h-60 flex flex-col items-center" :class="$style.card">
                     <div class="w-20 h-20 rd-50%">
                         <img :src="AvatarImg" class="h-full w-full object-cover rd-50%" alt="">

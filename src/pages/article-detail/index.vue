@@ -1,10 +1,10 @@
 <template>
     <div class="bg-#f4f5f5 content-height flex justify-center">
-        <div class="w-300 pt-15 flex justify-between">
+        <div class="w-250 lg-w-300 pt-15 flex justify-center lg-justify-between">
             <div class="w-210 rd-3 overflow-scroll article-container">
                 <MdPreview class="rd-2" :model-value="articleData.content" :editor-id="mdId" @on-get-catalog="getCatalog" />
             </div>
-            <div class="w-75">
+            <div class="hidden lg-block w-75">
                 <div class="w-full bg-#fff rd-2">
                     <div class="pl-5 text-5 font-600 lh-12 h-12 b-b-1 b-b-solid b-b-#e2e2e2">
                         目录

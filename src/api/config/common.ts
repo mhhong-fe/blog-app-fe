@@ -70,3 +70,14 @@ export function API_GET_ARTICLE_DETAIL(id: number): ARC<CommonResponseData<Artic
         params: { id },
     };
 }
+
+/**
+ * @description 增加浏览数量
+ */
+export function API_ADD_ARTICLE_VIEW_COUNT(id: number): ARC<CommonResponseData<boolean>> {
+    return {
+        url: '/api/article/addViewCount',
+        method: 'post',
+        data: { id },
+    };
+}

@@ -27,6 +27,10 @@
                             <img :src="CategorySrc" alt="" width="14" height="14">
                             {{ item.categoryName || '--' }}
                         </span>
+                        <span class="inline-flex items-center  gap-1">
+                            <img :src="ViewSrc" alt="" width="14" height="14">
+                            {{ item.viewCount }}
+                        </span>
                     </div>
                 </div>
                 <el-pagination
@@ -83,7 +87,7 @@ import { request } from '@/api/index';
 import AuthorSrc from '@/assets/imgs/author.svg';
 import CategorySrc from '@/assets/imgs/category.svg';
 import TimeSrc from '@/assets/imgs/time.svg';
-// import ViewSrc from '@/assets/imgs/views.svg';
+import ViewSrc from '@/assets/imgs/views.svg';
 import AvatarImg from '@/assets/imgs/avatar.png';
 
 const list = ref([] as ArticlesRow[]);

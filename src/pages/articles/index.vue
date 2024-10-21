@@ -21,7 +21,7 @@
                         </span>
                         <span class="inline-flex items-center gap-1">
                             <img :src="TimeSrc" alt="" width="14" height="14">
-                            {{ dayjs(item.createTime).format('YYYY-MM-DD') }}
+                            {{ dayjs(item.createdTime).format('YYYY-MM-DD') }}
                         </span>
                         <span class="inline-flex items-center  gap-1">
                             <img :src="CategorySrc" alt="" width="14" height="14">

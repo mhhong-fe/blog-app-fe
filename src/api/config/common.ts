@@ -20,8 +20,8 @@ interface GetArticleListPayload extends PageDto {
 }
 
 export interface ArticlesRow extends EditArticlesPayload {
-    createTime: number;
-    updateTime: number;
+    createdTime: number;
+    updatedTime: number;
     viewCount: number;
     author: string;
     categoryName: string;

@@ -1,13 +1,14 @@
 import { createRouter, createWebHistory } from 'vue-router';
 
-import Home from '../pages/home/index.vue';
-import About from '../pages/about/index.vue';
-import Log from '../pages/log/index.vue';
-import Demo from '../pages/demo/index.vue';
-import ArticleDetail from '../pages/article-detail/index.vue';
-import Articles from '../pages/articles/index.vue';
 import { request } from '~/api';
 import { API_ADD_ARTICLE_VIEW_COUNT } from '~/api/config/common';
+
+const Home = () => import('../pages/home/index.vue');
+const About = () => import('../pages/about/index.vue');
+const Log = () => import('../pages/log/index.vue');
+const Demo = () => import('../pages/demo/index.vue');
+const ArticleDetail = () => import('../pages/article-detail/index.vue');
+const Articles = () => import('../pages/articles/index.vue');
 
 const routes = [
     { path: '/', redirect: '/home' },

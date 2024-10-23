@@ -30,7 +30,7 @@
                 </div>
             </template>
         </el-upload>
-        <el-dialog v-if="previewDlgVisible" v-model="previewDlgVisible" title="Shipping address" width="500">
+        <el-dialog v-if="previewDlgVisible" v-model="previewDlgVisible" title="预览弹窗" width="800">
             <!-- 关闭弹窗就销毁这个元素，不然两个pdf会重叠 -->
             <FilePreview v-if="previewDlgVisible" :url="previewUrl" />
         </el-dialog>
@@ -41,7 +41,6 @@
 import { ref } from 'vue';
 import { ElMessage, ElMessageBox } from 'element-plus';
 import type { UploadFile, UploadProps, UploadUserFile } from 'element-plus';
-import PDF from 'pdf-vue3';
 import FileIcon from '@/components/file-icon.vue';
 import FilePreview from '@/components/file-preview.vue';
 

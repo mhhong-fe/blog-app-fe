@@ -26,7 +26,6 @@ const router = createRouter({
 });
 
 router.beforeEach((to, from, next) => {
-    console.log({ to, from, next });
     if (to.name === 'article-detail' && to.params.id) {
         request(API_ADD_ARTICLE_VIEW_COUNT(Number(to.params.id)));
     }

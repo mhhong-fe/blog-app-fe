@@ -1,5 +1,5 @@
 <template>
-    <header class="position-fixed h-22.5 w-full b-b-1.5 b-b-solid b-#e2e2e3 bg-#fff flex items-center justify-center">
+    <header class="z-999 position-fixed h-22.5 w-full b-b-1.5 b-b-solid b-#e2e2e3 bg-#fff flex items-center justify-center">
         <div class="flex w-80 lg:w-300 items-center justify-between">
             <div class="flex items-center gap-4">
                 <div class="w-12 h-12 rd-50%">

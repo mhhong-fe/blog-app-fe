@@ -39,7 +39,7 @@ export default defineConfig(({ mode }) => {
         },
         server: {
             proxy: {
-                '/api': {
+                '/blogApi': {
                     target: 'http://localhost:4000',
                     changeOrigin: true,
                     rewrite: path => path.replace(/^\/api/, ''), // 可选: 修改路径
@@ -47,6 +47,7 @@ export default defineConfig(({ mode }) => {
             },
         },
         build: {
+            assetsDir: 'blog/assets',
             rollupOptions: {
                 output: {
                     manualChunks(id) {

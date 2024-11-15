@@ -32,7 +32,7 @@ export interface ArticlesRow extends EditArticlesPayload {
  */
 export function API_GET_ARTICLE_LIST(data: GetArticleListPayload): ARC<CommonResponseData<ArticlesRow[]>> {
     return {
-        url: '/api/article/list',
+        url: '/blogApi/article/list',
         method: 'post',
         data,
     };
@@ -55,7 +55,7 @@ export interface OverviewData {
  */
 export function API_GET_ARTICLE_OVERVIEW(): ARC<CommonResponseData<OverviewData>> {
     return {
-        url: '/api/article/overview',
+        url: '/blogApi/article/overview',
         method: 'get',
     };
 }
@@ -65,7 +65,7 @@ export function API_GET_ARTICLE_OVERVIEW(): ARC<CommonResponseData<OverviewData>
  */
 export function API_GET_ARTICLE_DETAIL(id: number): ARC<CommonResponseData<ArticlesRow>> {
     return {
-        url: '/api/article/detail',
+        url: '/blogApi/article/detail',
         method: 'get',
         params: { id },
     };
@@ -76,7 +76,7 @@ export function API_GET_ARTICLE_DETAIL(id: number): ARC<CommonResponseData<Artic
  */
 export function API_ADD_ARTICLE_VIEW_COUNT(id: number): ARC<CommonResponseData<boolean>> {
     return {
-        url: '/api/article/addViewCount',
+        url: '/blogApi/article/addViewCount',
         method: 'post',
         data: { id },
     };

@@ -25,7 +25,7 @@ export default defineConfig(({ mode }) => {
                 // 压缩算法，支持 'gzip' 或 'brotli'
                 algorithm: 'gzip',
                 // 是否在构建时删除原文件
-                deleteOriginFile: false,
+                deleteOriginFile: true,
                 // 其他可选配置
                 threshold: 10240, // 只对大于10KB的文件进行压缩
                 ext: '.gz', // 生成的文件后缀
@@ -42,7 +42,7 @@ export default defineConfig(({ mode }) => {
                 '/blogApi': {
                     target: 'http://localhost:4000',
                     changeOrigin: true,
-                    rewrite: path => path.replace(/^\/api/, ''), // 可选: 修改路径
+                    rewrite: path => path.replace(/^\/blogApi/, ''), // 可选: 修改路径
                 },
             },
         },

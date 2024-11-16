@@ -31,6 +31,7 @@ const titleList = [
     { name: '首页', route: '/home' },
     { name: '文章', route: '/articles' },
     { name: 'demo', route: '/demo' },
+    { name: '学习日志', route: '/study-log' },
     { name: '更新日志', route: '/log' },
     { name: '关于我', route: '/about' },
 ];

@@ -9,6 +9,8 @@ const Log = () => import('../pages/log/index.vue');
 const Demo = () => import('../pages/demo/index.vue');
 const ArticleDetail = () => import('../pages/article-detail/index.vue');
 const Articles = () => import('../pages/articles/index.vue');
+const StudyLog = () => import('../pages/study-log/index.vue');
+const NotFound = () => import('../pages/not-found/index.vue');
 
 const routes = [
     { path: '/', redirect: '/home' },
@@ -16,8 +18,10 @@ const routes = [
     { path: '/about', name: 'about', component: About },
     { path: '/log', name: 'log', component: Log },
     { path: '/demo', name: 'demo', component: Demo },
+    { path: '/study-log', name: 'studyLog', component: StudyLog },
     { path: '/articles', name: 'articles', component: Articles },
     { path: '/article/:id', name: 'article-detail', component: ArticleDetail },
+    { path: '/:pathMatch(.*)*', name: 'NotFound', component: NotFound },
 ];
 
 // 前端路由，使用blog前缀

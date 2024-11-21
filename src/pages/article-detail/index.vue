@@ -2,7 +2,10 @@
     <div class="bg-#f4f5f5 content-height flex justify-center">
         <div class="w-250 lg-w-300 pt-15 flex justify-center lg-justify-between">
             <div class="w-210 rd-3 pb-20 overflow-scroll article-container">
-                <MdPreview class="rd-2" :model-value="articleData.content" :editor-id="mdId" @on-get-catalog="getCatalog" />
+                <div class="w-full bg-#fff text-6 pl-4 pt-4 font-600 rd-t-2">
+                    {{ articleData.title }}
+                </div>
+                <MdPreview class="rd-b-2" :model-value="articleData.content" :editor-id="mdId" @on-get-catalog="getCatalog" />
             </div>
             <div class="hidden lg-block w-75 max-h-70vh overflow-scroll">
                 <div class="w-full bg-#fff rd-2">

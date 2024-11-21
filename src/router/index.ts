@@ -6,10 +6,8 @@ import { API_ADD_ARTICLE_VIEW_COUNT } from '~/api/config/common';
 const Home = () => import('../pages/home/index.vue');
 const About = () => import('../pages/about/index.vue');
 const Log = () => import('../pages/log/index.vue');
-const Demo = () => import('../pages/demo/index.vue');
 const ArticleDetail = () => import('../pages/article-detail/index.vue');
 const Articles = () => import('../pages/articles/index.vue');
-const StudyLog = () => import('../pages/study-log/index.vue');
 const NotFound = () => import('../pages/not-found/index.vue');
 
 const routes = [
@@ -17,8 +15,6 @@ const routes = [
     { path: '/home', name: 'path', component: Home },
     { path: '/about', name: 'about', component: About },
     { path: '/log', name: 'log', component: Log },
-    { path: '/demo', name: 'demo', component: Demo },
-    { path: '/study-log', name: 'studyLog', component: StudyLog },
     { path: '/articles', name: 'articles', component: Articles },
     { path: '/article/:id', name: 'article-detail', component: ArticleDetail },
     { path: '/:pathMatch(.*)*', name: 'NotFound', component: NotFound },

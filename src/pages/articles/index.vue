@@ -79,7 +79,7 @@
 </template>
 
 <script setup lang="ts">
-import { onMounted, ref } from 'vue';
+import { onMounted, ref, watch } from 'vue';
 import { dayjs } from 'element-plus';
 import { useRouter } from 'vue-router';
 import { API_GET_ARTICLE_LIST, API_GET_ARTICLE_OVERVIEW, type ArticlesRow, type OverviewData } from '@/api/config/common';
@@ -114,6 +114,15 @@ onMounted(async () => {
 
     const overviewRes = await request(API_GET_ARTICLE_OVERVIEW());
     overviewData.value = overviewRes.data.data;
+    pageDto.value.total = res.data.pageDto?.total as number;
+});
+
+watch([() => pageDto.value.pageNum, () => pageDto.value.pageSize], async () => {
+    const res = await request(API_GET_ARTICLE_LIST({
+        pageNum: pageDto.value.pageNum,
+        pageSize: pageDto.value.pageSize,
+    }));
+    list.value = res.data.data;
 });
 </script>
 

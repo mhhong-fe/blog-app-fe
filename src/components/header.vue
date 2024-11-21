@@ -1,6 +1,6 @@
 <template>
     <header class="z-999 position-fixed h-22.5 w-full b-b-1.5 b-b-solid b-#e2e2e3 bg-#fff flex items-center justify-center">
-        <div class="flex w-80 lg:w-300 items-center justify-between">
+        <div class="flex w-120 lg:w-300 items-center justify-between">
             <div class="flex items-center gap-4">
                 <div class="w-12 h-12 rd-50%">
                     <img :src="AvatarImg" class="w-12 h-12 object-cover rd-50%" alt="">
@@ -8,6 +8,7 @@
                 <div class="font-500 text-5">
                     个人博客
                 </div>
+                <!-- <el-input :prefix-icon="Search" placeholder="搜索文章标题" class="w-60 rd-20!" :class="$style.searchInput" /> -->
             </div>
             <div class="gap-5 hidden lg:flex">
                 <div
@@ -25,14 +26,12 @@
 <script setup lang="ts">
 import { ref, watch } from 'vue';
 import { useRoute, useRouter } from 'vue-router';
+// import { Search } from '@element-plus/icons-vue';
 import AvatarImg from '@/assets/imgs/avatar.png';
 
 const titleList = [
     { name: '首页', route: '/home' },
     { name: '文章', route: '/articles' },
-    { name: 'demo', route: '/demo' },
-    { name: '学习日志', route: '/study-log' },
-    { name: '更新日志', route: '/log' },
     { name: '关于我', route: '/about' },
 ];
 

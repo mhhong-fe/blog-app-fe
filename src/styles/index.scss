@@ -20,6 +20,12 @@ body {
     height: calc(100vh - 90px);
 }
 
+@media screen and (max-width: 900px) {
+    .content-height {
+        height: calc(100vh - 72px);
+    }
+}
+
 .content-width {
     width: calc(100vw - 200px);
 }

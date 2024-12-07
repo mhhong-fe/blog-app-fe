@@ -14,7 +14,8 @@ export default defineConfig(({ mode }) => {
             UnoCSS({
                 theme: {
                     screens: {
-                        lg: '1280px',
+                        md: '900',
+                        lg: '1280',
                     },
                 },
             }),

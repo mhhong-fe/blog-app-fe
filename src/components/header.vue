@@ -1,5 +1,5 @@
 <template>
-    <header class="z-999 position-fixed h-22.5 w-full b-b-1.5 b-b-solid b-#e2e2e3 bg-#fff flex items-center justify-center">
+    <header class="z-999 position-fixed h-18 lg-h-22.5 p-x-3 w-full b-b-1.5 b-b-solid b-#e2e2e3 bg-#fff flex items-center justify-center">
         <div class="flex w-120 lg:w-300 items-center justify-between">
             <div class="flex items-center gap-4">
                 <div class="w-12 h-12 rd-50%">
@@ -8,7 +8,6 @@
                 <div class="font-500 text-5">
                     个人博客
                 </div>
-                <!-- <el-input :prefix-icon="Search" placeholder="搜索文章标题" class="w-60 rd-20!" :class="$style.searchInput" /> -->
             </div>
             <div class="gap-5 hidden lg:flex">
                 <div

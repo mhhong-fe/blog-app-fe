@@ -1,10 +1,10 @@
 <template>
-    <div class="bg-#f4f5f5 content-height flex justify-center overflow-scroll">
-        <div class="w-250 lg-w-300 flex justify-center lg-justify-between mt-15">
-            <div>
+    <div class="p-x-3 bg-#f4f5f5 content-height flex justify-center overflow-scroll box-border">
+        <div class="h-full w-250 lg-w-300 flex justify-center lg-justify-between mt-5 lg-mt-15">
+            <div class="lg-w-212">
                 <div
                     v-for="item in list" :key="item.id"
-                    class="w-210 h-35 rd-4 bg-#fff mb-10 p-5 pl-10 cursor-pointer"
+                    class="h-35 rd-4 bg-#fff mb-5 lg-mb-10 p-5 pl-10 cursor-pointer"
                     :class="$style.list"
                     @click="handleClick(item.id as number)"
                 >
@@ -15,10 +15,6 @@
                         {{ item.articleDesc }}
                     </div>
                     <div class=" flex gap-5">
-                        <span class="inline-flex items-center gap-1">
-                            <img :src="AuthorSrc" alt="" width="14" height="14">
-                            影月
-                        </span>
                         <span class="inline-flex items-center gap-1">
                             <img :src="TimeSrc" alt="" width="14" height="14">
                             {{ dayjs(item.createdTime).format('YYYY-MM-DD') }}

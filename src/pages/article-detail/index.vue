@@ -1,18 +1,18 @@
 <template>
-    <div class="bg-#f4f5f5 content-height flex justify-center">
-        <div class="w-250 lg-w-300 pt-15 flex justify-center lg-justify-between">
-            <div class="w-210 rd-3 pb-20 overflow-scroll article-container">
+    <div class="text-3 p-x-3 bg-#f4f5f5 content-height flex justify-center">
+        <div class="w-100% md-w-250 lg-w-300 pt-10 lg-pt-15 flex justify-center lg-justify-between">
+            <div class="w-210 rd-3 overflow-scroll article-container">
                 <div class="w-full bg-#fff text-6 pl-4 pt-4 font-600 rd-t-2">
                     {{ articleData.title }}
                 </div>
-                <MdPreview class="rd-b-2" :model-value="articleData.content" :editor-id="mdId" @on-get-catalog="getCatalog" />
+                <MdPreview class="rd-b-2 pb-10 mb-20" :model-value="articleData.content" :editor-id="mdId" @on-get-catalog="getCatalog" />
             </div>
             <div class="hidden lg-block w-75 max-h-70vh overflow-scroll">
                 <div class="w-full bg-#fff rd-2">
                     <div class="pl-5 text-5 font-600 lh-12 h-12 b-b-1 b-b-solid b-b-#e2e2e2">
                         目录
                     </div>
-                    <ul v-if="catalogList.length !== 0" class="rounded-xl catalog-list" @click="handleCatelogClick">
+                    <ul v-if="catalogList.length !== 0" class="rounded-xl catalog-list lg-text-4" @click="handleCatelogClick">
                         <li
                             v-for="(item, index) in catalogList"
                             :key="index"

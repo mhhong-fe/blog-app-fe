@@ -1,7 +1,7 @@
 <template>
     <div>
         <Header />
-        <div class="pt-22.5">
+        <div class="pt-18 lg-pt-22.5">
             <RouterView />
         </div>
     </div>

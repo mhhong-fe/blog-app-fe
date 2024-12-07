@@ -4,7 +4,6 @@ import { defineConfig } from 'vite';
 import vue from '@vitejs/plugin-vue';
 import UnoCSS from 'unocss/vite';
 import { analyzer } from 'vite-bundle-analyzer';
-import compression from 'vite-plugin-compression';
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => {
@@ -21,15 +20,6 @@ export default defineConfig(({ mode }) => {
             }),
             // 只在开发环境看看
             isDevelopment && analyzer(),
-            compression({
-                // 压缩算法，支持 'gzip' 或 'brotli'
-                algorithm: 'gzip',
-                // 是否在构建时删除原文件
-                deleteOriginFile: true,
-                // 其他可选配置
-                threshold: 10240, // 只对大于10KB的文件进行压缩
-                ext: '.gz', // 生成的文件后缀
-            }),
         ],
         resolve: {
             alias: {

@@ -28,8 +28,8 @@ COPY nginx.conf /etc/nginx/nginx.conf
 # 将构建产物从 /app/dist 复制到 Nginx 的默认服务目录
 COPY --from=builder /app/dist /usr/share/nginx/html
 
-# 暴露端口 80
-EXPOSE 80
+# 暴露端口 3001
+EXPOSE 3001
 
 # 启动 Nginx
 CMD ["nginx", "-g", "daemon off;"]

@@ -28,10 +28,9 @@ import { useRoute, useRouter } from 'vue-router';
 import AvatarImg from '@/assets/imgs/avatar.png';
 
 const titleList = [
-    { name: '首页', route: '/home' },
-    { name: '文章', route: '/articles' },
+    // { name: '首页', route: '/home' },
+    { name: '工具', route: '/tools' },
     { name: 'demo', route: '/demo' },
-    { name: '更新日志', route: '/log' },
     { name: '关于我', route: '/about' },
 ];
 

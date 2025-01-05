@@ -1,8 +1,7 @@
 <template>
-    <div class="flex ">
+    <div class="flex content-height">
         <el-menu
-            :default-active="demoList[0].key" :class="$style.menu"
-            @select="handleMenuSelect"
+            :default-active="demoList[0].key" :class="$style.menu" @select="handleMenuSelect"
         >
             <el-menu-item v-for="item in demoList" :key="item.key" :index="item.key">
                 <template #title>
@@ -19,14 +18,10 @@
 <script setup lang="ts">
 import { computed, ref } from 'vue';
 import type { MenuItemClicked } from 'element-plus';
-import ColorPicker from './color-picker/index.vue';
-import RotateMoon from './rotate-moon/index.vue';
-import Upload from './upload/index.vue';
+import Chart from './chart/index.vue';
 
 const demoList = [
-    { key: 'color-picker', title: '原生的取色器', component: ColorPicker },
-    { key: 'rotate-moon', title: '旋转动画', component: RotateMoon },
-    { key: 'upload', title: '文件上传', component: Upload },
+    { key: 'chart', title: '数据分析', component: Chart },
 ];
 
 const selectMenu = ref(demoList[0].key);
